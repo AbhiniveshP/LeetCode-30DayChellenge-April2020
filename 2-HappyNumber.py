@@ -2,6 +2,8 @@ class HappyNumber:
     
     def __getSumSquares(self, n: int) -> int:
         
+        #   Time Complexity:    O(n)    Space:  O(1)
+        #   Calculates sum of squares of all digits of a given number
         sumSquares = 0
         
         while (n > 0):
@@ -13,12 +15,16 @@ class HappyNumber:
     
     def isHappy(self, n: int) -> bool:
         
+        #   Time Complexity:    O(N)    Space Complexity:   O(N)
+        #   N is number of elements in the set till you find already occurring number
         if (n <= 0):
             return False
         
+        #   initializations
         setSums = set()
         newSumSquares = n
         
+        #   iterate till you see a 1 (true) or an already occurred number (false)
         while (True):
             newSumSquares = self.__getSumSquares(newSumSquares)
             if (newSumSquares == 1):
