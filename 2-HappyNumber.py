@@ -15,7 +15,8 @@ class HappyNumber:
     
     def isHappy(self, n: int) -> bool:
         
-        #   Time Complexity:    O(N)    Space Complexity:   O(N)
+        #   Time Complexity:    O(N)    Space Complexity:   O(1)
+        #   Space doesn't exceed 738 numbers in the set
         #   N is number of elements in the set till you find already occurring number
         if (n <= 0):
             return False
